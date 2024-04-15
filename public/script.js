@@ -25,6 +25,4 @@ window.addEventListener('load',async e=>{
         .getUserMedia({audio:true,video:true})
         state.media=media;
     userVideo.srcObject = media
-
-
 })
