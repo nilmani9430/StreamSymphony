@@ -1,4 +1,7 @@
 /Frontend/node_modules
+/Backend/package-lock.json
+/Frontend/package-lock.json
 /Backend/node_modules
 /streamer/node_modules
 /Backend/.env
+/streamer/package-lock.json

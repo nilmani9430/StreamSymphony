@@ -37,7 +37,7 @@ const Login = ({ setUserState }) => {
   };
 
   const loginHandler = (e) => {
-    console.log('hey')
+    // console.log('hey')
     e.preventDefault();
     setFormErrors(validateForm(user));
     setIsSubmit(true);
@@ -50,7 +50,11 @@ const Login = ({ setUserState }) => {
         console.log("After successful login")
         setUserState(res.data.user);
         navigate("/", { replace: true });
-      });
+      })
+      .catch((err)=>{
+        // console.log(err.response.data.message);
+        toast.error(err.response.data.message);
+      })
     }
   }, [formErrors, isSubmit, navigate, setUserState, user]);
 

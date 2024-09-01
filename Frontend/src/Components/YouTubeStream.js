@@ -70,10 +70,10 @@ const OnGoLive = ({ rtmpUrl, streamKey }) => {
             <div className="flex flex-col items-center">
                 <video ref={userVideoRef} autoPlay muted className="rounded-lg shadow-md mb-4" />
                 {!audioPermission && (
-                    <button className="btn-blue mb-2" onClick={() => setAudioPermission(true)}>Allow Audio</button>
+                    <button className="btn-red mb-2" onClick={() => setAudioPermission(true)}>Allow Audio</button>
                 )}
                 {!videoPermission && (
-                    <button className="btn-blue mb-2" onClick={() => setVideoPermission(true)}>Allow Video</button>
+                    <button className="btn-red mb-2" onClick={() => setVideoPermission(true)}>Allow Video</button>
                 )}
                 {audioPermission && videoPermission && (
                     <>

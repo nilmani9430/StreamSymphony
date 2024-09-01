@@ -71,6 +71,10 @@ const Register = () => {
       axios.post("http://localhost:3000/api/v1/signup", user).then((res) => {
         toast.success(res.data.message);
         navigate("/login", { replace: true });
+      })
+      .catch((err)=>{
+        // console.log(err.response.data.message);
+        toast.error(err.response.data.message);
       });
     }
   }, [formErrors, isSubmit, navigate, user]);
